@@ -1,0 +1,25 @@
+{
+    "name": "wait-for-pg-db",
+    "version": "1.0.0",
+    "description": "Ensures that certain Postgres DB exist",
+    "main": "dist/wait-for-pg-db.js",
+    "author": "Anatoly Zelenin",
+    "license": "MIT",
+    "dependencies": {
+        "debug": "^4.0.1",
+        "pg": "^7.5.0"
+    },
+    "scripts": {
+        "start": "./node_modules/.bin/ts-node wait-for-pg-db.ts",
+        "build": "./node_modules/.bin/tsc"
+    },
+    "bin": {
+        "wait-for-pg-db": "./dist/wait-for-pg-db.js"
+    },
+    "devDependencies": {
+        "@types/node": "^10.9.4",
+        "nodemon": "^1.18.4",
+        "ts-node": "^7.0.1",
+        "typescript": "^3.1.3"
+    }
+}
