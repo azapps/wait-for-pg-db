@@ -1,5 +1,7 @@
 # Ensure connection and existence of a postgres database
 
+Install: `npm install -g wait-for-pg-db`
+
 This program is able to perform following operations:
 
 1. Waiting for a set of Kafka topics to become available
