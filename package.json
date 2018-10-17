@@ -1,6 +1,6 @@
 {
     "name": "wait-for-pg-db",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Ensures that certain Postgres DB exist",
     "main": "dist/wait-for-pg-db.js",
     "author": "Anatoly Zelenin",
