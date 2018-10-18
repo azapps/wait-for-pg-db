@@ -28,7 +28,7 @@ Connection variables as defined by [libpq](https://www.postgresql.org/docs/9.1/s
 
 ## Run SQL scripts
 
-* `RUN_AFTER_CONNECT`: comma separated list of SQL files that should
+* `RUN_SQL_AFTER_CONNECT`: comma separated list of SQL files that should
   be executed against the database after successfull connection.
 
 # Example calls

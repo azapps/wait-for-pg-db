@@ -27,11 +27,11 @@ async function try_to_connect(abort_after_tries, wait_between_tries_s) {
 }
 
 try_to_connect(abort_after_tries, wait_between_tries_s).then(async (client) => {
-    const run_after_connect_raw = process.env.RUN_AFTER_CONNECT;
-    if(run_after_connect_raw) {
-        const run_after_connect = run_after_connect_raw.split(",").map(x => x.trim());
-        for(const i in run_after_connect) {
-            const file = run_after_connect[i];
+    const run_sql_after_connect_raw = process.env.RUN_SQL_AFTER_CONNECT;
+    if(run_sql_after_connect_raw) {
+        const run_sql_after_connect = run_sql_after_connect_raw.split(",").map(x => x.trim());
+        for(const i in run_sql_after_connect) {
+            const file = run_sql_after_connect[i];
             var sql = fs.readFileSync(file, 'utf8');
             try {
                 await client.query(sql);
