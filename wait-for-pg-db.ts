@@ -18,7 +18,7 @@ async function try_to_connect(abort_after_tries, wait_between_tries_s) {
             await client.connect();
             return client;
         } catch(e) {
-            debug("Could still not connect to the db",e);
+            debug("Could still not connect to the db",e.message);
         }
         tries_left--;
         await sleep(wait_between_tries_s * 1000);
@@ -35,8 +35,9 @@ try_to_connect(abort_after_tries, wait_between_tries_s).then(async (client) => {
             var sql = fs.readFileSync(file, 'utf8');
             try {
                 await client.query(sql);
+                debug("Executed SQL script from", file);
             } catch(e) {
-                console.log("Failed to execute query", e);
+                console.error("Failed to execute query", e.message);
                 process.exit(1);
             }
         }
