@@ -1,6 +1,6 @@
 {
     "name": "wait-for-pg-db",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Ensures that certain Postgres DB exist",
     "main": "dist/wait-for-pg-db.js",
     "author": "Anatoly Zelenin",
@@ -28,5 +28,9 @@
         "url": "https://github.com/azapps/wait-for-pg-db.git"
     },
     "homepage": "https://github.com/azapps/wait-for-pg-db.git",
-    "keywords": ["PostgreSQL", "Notify", "Event"]
+    "keywords": [
+        "PostgreSQL",
+        "Notify",
+        "Event"
+    ]
 }
